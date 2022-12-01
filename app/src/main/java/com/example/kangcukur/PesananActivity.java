@@ -73,8 +73,6 @@ public class PesananActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(decoration);
         recyclerView.setAdapter(pesananadapter);
 
-
-
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -86,13 +86,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".HasilGantiPassActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".AddPaketActivity"
             android:exported="false">
             <meta-data
