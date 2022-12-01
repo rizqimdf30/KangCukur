@@ -1,0 +1,328 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAdminActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/bg_round_bottom"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/logoputih" />
+
+            <ImageView
+                android:id="@+id/img_txtkangcukur"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/logo"
+                android:layout_marginTop="15dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/textputih" />
+
+            <TextView
+                android:id="@+id/slogan"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Mari Kita Cukur"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_below="@id/img_txtkangcukur"
+                android:layout_toRightOf="@id/logo"
+                android:textAlignment="center"
+                />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/profileadmin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_user_circle_white"
+        android:layout_below="@id/header"/>
+
+    <TextView
+        android:id="@+id/title_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profileadmin"
+        android:layout_below="@id/header"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:lines="1"
+        android:text="Halo, Admin :)"
+        android:textColor="@color/white_smoke"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/desc_admin"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/profileadmin"
+        android:layout_below="@+id/title_admin"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:lines="2"
+        android:text="Selamat datang di aplikasi KangCukur!!"
+        android:textColor="@color/white_smoke"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/desc_admin"
+        android:layout_above="@id/btn_logout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/daftar_kangcukur"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginVertical="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_list_Kangcukur"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/list"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/text_listkangcukur"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:textSize="16dp"
+                                android:text="Daftar KangCukur"
+                                android:typeface="sans"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/daftar_paket"
+                        android:layout_toRightOf="@id/daftar_kangcukur"
+                        android:layout_width="140dp"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginVertical="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_list_paket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/daftarpaket"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/text_listpaket"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/black"
+                                android:textAlignment="center"
+                                android:textSize="16dp"
+                                android:text="Daftar Paket"
+                                android:typeface="sans"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pesan_kangcukur"
+                    android:layout_width="200dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="20dp"
+                    android:outlineSpotShadowColor="@color/blue_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_pesan"
+                            android:layout_width="100dp"
+                            android:layout_height="75dp"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/order" />
+
+                        <TextView
+                            android:id="@+id/textPesan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingTop="10dp"
+                            android:text="Tambah Pesanan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="56dp"
+        android:text="Log Out"
+        android:textAllCaps="false"
+        android:layout_above="@id/nav_bottom"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="24dp"
+        app:strokeColor="@android:color/holo_red_light"
+        app:strokeWidth="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginVertical="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/nav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/ic_home_fill" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="HOME"
+                android:textAlignment="center"
+                android:textColor="@color/blue_600"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_pesanan"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/ic_file_list_line" />
+
+            <TextView
+                android:id="@+id/txtRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="RIWAYAT"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

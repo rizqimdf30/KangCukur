@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListPegawaiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingEnd="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/kembali"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/arrow_left"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="30dp"/>
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/logoitem" />
+                    <ImageView
+                        android:id="@+id/img_kangcukur"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_toLeftOf="@id/logo"
+                        android:layout_marginTop="15dp"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/textbiru" />
+                    <TextView
+                        android:id="@+id/slogan"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mari Kita Cukur"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_below="@id/img_kangcukur"
+                        android:layout_toLeftOf="@id/logo"
+                        android:textAlignment="center"
+                        />
+                </RelativeLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/listkangcukurheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:text="Daftar KangCukur"
+                android:textColor="@color/blue_600"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_top"
+            android:backgroundTint="@color/blue_600">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btn_Bottom"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerview_pegawai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:id="@+id/btn_Bottom"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_round_top"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:minHeight="56dp"
+                    android:text="Tambah"
+                    android:textAllCaps="false"
+                    app:cornerRadius="24dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
