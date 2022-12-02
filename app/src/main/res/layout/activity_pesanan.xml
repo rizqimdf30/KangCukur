@@ -83,21 +83,17 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_round_top"
-                android:backgroundTint="@color/blue_600" />
-
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:paddingHorizontal="20dp"
+                android:background="@drawable/bg_round_top"
+                android:backgroundTint="@color/blue_600"
                 android:paddingTop="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
